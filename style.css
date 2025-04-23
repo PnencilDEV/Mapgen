@@ -1,0 +1,161 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.input-group input[type="color"] {
+    margin-right: 10px;
+    vertical-align: middle;
+    height: 34px;
+}
+
+.input-group button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background-color: #45a049;
+}
+
+.single-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bulk-input {
+    display: flex;
+    gap: 10px;
+}
+
+.bulk-input textarea {
+    width: 300px;
+    height: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.bulk-input button {
+    height: fit-content;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bulk-input button:hover {
+    background-color: #45a049;
+}
+
+.toggle-group {
+    margin-top: 10px;
+}
+
+.toggle-group label {
+    margin-right: 20px;
+}
+
+#map-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#worldMap {
+    width: 100%;
+    height: auto;
+    background-color: #f8f9fa;
+}
+
+.pin-label {
+    font-size: 12px;
+    fill: #333;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.label-background {
+    fill: white;
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 1;
+}
+
+.color-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.color-presets {
+    display: flex;
+    gap: 5px;
+}
+
+.preset-color {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.preset-color:hover {
+    transform: scale(1.1);
+}
+
+.preset-color.active {
+    border-color: #000;
+}
+
+.export-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.export-group button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.export-group select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.export-group button:hover {
+    background-color: #45a049;
+}
