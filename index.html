@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <div class="input-group">
+                <div class="single-input">
+                    <input type="text" id="cityInput" placeholder="Enter city name">
+                    <div class="color-controls">
+                        <input type="color" id="pinColor" value="#FF0000">
+                        <div class="color-presets">
+                            <button class="preset-color" data-color="#FF0000" style="background-color: #FF0000;"></button>
+                            <button class="preset-color" data-color="#00FF00" style="background-color: #00FF00;"></button>
+                            <button class="preset-color" data-color="#0000FF" style="background-color: #0000FF;"></button>
+                            <button class="preset-color" data-color="#FFA500" style="background-color: #FFA500;"></button>
+                            <button class="preset-color" data-color="#800080" style="background-color: #800080;"></button>
+                        </div>
+                    </div>
+                    <button onclick="addCity()">Add City</button>
+                </div>
+                <div class="bulk-input">
+                    <textarea id="bulkCityInput" placeholder="Enter cities (one per line)&#10;Format: City Name + Color (optional)&#10;Example:&#10;New York&#10;Tokyo + Red&#10;Paris + #00FF00&#10;London + blue"></textarea>
+                    <button onclick="addBulkCities()">Add All Cities</button>
+                </div>
+            </div>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="equatorToggle"> Show Equator
+                </label>
+                <label>
+                    <input type="checkbox" id="primeMeridianToggle"> Show Prime Meridian
+                </label>
+            </div>
+            <div class="export-group">
+                <button id="exportButton">Export Map</button>
+                <select id="exportFormat">
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                </select>
+            </div>
+        </div>
+        <div id="map-container">
+            <svg id="worldMap" viewBox="0 0 1000 500">
+                <!-- World map path will be added via JavaScript -->
+                <path id="countries" fill="#e8e8e8" stroke="#666" stroke-width="0.5"></path>
+                <line id="equator" x1="0" y1="250" x2="1000" y2="250" stroke="#2962ff" stroke-width="1.5" style="display: none;"/>
+                <line id="primeMeridian" x1="500" y1="0" x2="500" y2="500" stroke="#2962ff" stroke-width="1.5" style="display: none;"/>
+                <g id="pins"></g>
+            </svg>
+        </div>
+    </div>
+    <script src="https://unpkg.com/d3@7.8.5/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/d3-geo@3.1.0/dist/d3-geo.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
